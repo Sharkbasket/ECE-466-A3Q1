@@ -9,7 +9,7 @@ int sc_main(int argc, char* argv[])
     adder<int> adder_i("adder_i");
     generator<int> generator_i("generator_i", 1);
     fork<int> fork_i("fork_i");
-    printer<int> printer_i("printer_i");
+    printer<int> printer_i("printer_i", 10);
     
     sc_fifo<int> adder_out("adder_out", 1);
     sc_fifo<int> generator_out("generator_out", 1);
