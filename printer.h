@@ -23,4 +23,6 @@ SC_MODULE(printer)
         
         sc_stop();
     }
+    
+    int INTERATIONS;
 };
