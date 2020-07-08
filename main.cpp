@@ -3,6 +3,8 @@
 #include "generator.h"
 #include "fork_module.h"
 #include "printer.h"
+#include "hw_fifo.h"
+#include "fifo_read_adapter.h"
 
 int sc_main(int argc, char* argv[]) {
     // Module instantiation
@@ -35,6 +37,7 @@ int sc_main(int argc, char* argv[]) {
     // Interconnect modules
     generator_i.out(generator_out);
     
+    adder_i.clock(clock);
     adder_i.in1(feedback);
     adder_i.in2(generator_out);
     adder_i.ready_in(fifo_ready);

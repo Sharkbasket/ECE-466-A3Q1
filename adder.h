@@ -2,6 +2,7 @@
 
 template<class T>
 SC_MODULE(adder) {
+    sc_in_clk clock;
     sc_fifo_in<T> in1, in2;
     sc_in<bool> ready_in;
     sc_out<bool> valid_out;
