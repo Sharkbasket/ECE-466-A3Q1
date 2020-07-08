@@ -8,10 +8,10 @@ SC_MODULE(generator) {
     
     generator(sc_module_name n, T constant)
     : sc_module(n), CONSTANT(constant) {
-        SC_THREAD(generate);
+        SC_THREAD(gen_process);
     }
     
-    void generate() {
+    void gen_process() {
         while (true) {
             out->write(CONSTANT);
         }
