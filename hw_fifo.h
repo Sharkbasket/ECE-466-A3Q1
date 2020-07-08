@@ -17,8 +17,8 @@ public:
         
         data = new T[size];
         
-        ready_out->initialize(true);
-        valid_out->initialize(false);
+        ready_out.initialize(true);
+        valid_out.initialize(false);
     }
     
     ~hw_fifo() {
