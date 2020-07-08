@@ -9,7 +9,7 @@ public:
     SC_HAS_PROCESS(fifo_read_adapter);
     
     fifo_read_adapter(sc_module_name n) : sc_module(n) {
-        ready_out->initialize(false);
+        ready_out.initialize(false);
     }
     
     T read() {
