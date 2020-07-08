@@ -22,7 +22,7 @@ SC_MODULE(adder) {
             // available space for next write)
             do {
                 wait(clock->posedge_event());
-            } while (ready_in->read() == false)
+            } while (ready_in->read() == false);
             
             valid_out->write(false);
         }

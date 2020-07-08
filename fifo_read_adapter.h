@@ -19,8 +19,7 @@ public:
         // Caller waits until fifo asserts valid, indicating readable data
         do {
             wait(clock->posedge_event());
-        }
-        while (valid_in->read() == false);
+        } while (valid_in->read() == false);
         
         // Caller receives data and de-asserts ready_out signal
         ready_out->write(false);
