@@ -14,7 +14,7 @@ public:
     
     T read() {
         // Caller asserts ready_out signal
-        ready_out->write(true)
+        ready_out->write(true);
         
         // Caller waits until fifo asserts valid, indicating readable data
         do {
