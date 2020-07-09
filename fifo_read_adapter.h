@@ -1,3 +1,5 @@
+#include "systemc.h"
+
 template<class T>
 class fifo_read_adapter : public sc_module, public sc_fifo_in_if<T> {
 public:
